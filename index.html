@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1>🍴 Foodie</h1>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <button onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+
+    <div>
+        <h2>Delicious Food,<br>Delivered Fast.</h2>
+
+        <p>
+            Order your favourite food from Foodie.
+        </p>
+
+        <a href="#menu" class="order-btn">Order Now</a>
+    </div>
+
+</section>
+
+<section id="menu">
+
+    <h2>Our Menu</h2>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search food..."
+        onkeyup="searchFood()"
+    >
+
+    <div class="categories">
+
+        <button onclick="filterFood('all')">All</button>
+        <button onclick="filterFood('pizza')">Pizza</button>
+        <button onclick="filterFood('burger')">Burger</button>
+        <button onclick="filterFood('dessert')">Dessert</button>
+
+    </div>
+
+    <div class="food-container">
+
+        <div class="food-card" data-category="pizza" data-name="Cheese Pizza">
+
+            <div class="food-image">🍕</div>
+
+            <h3>Cheese Pizza</h3>
+
+            <p>Delicious cheesy pizza</p>
+
+            <h4>₹299</h4>
+
+            <button onclick="addToCart('Cheese Pizza', 299)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card" data-category="burger" data-name="Chicken Burger">
+
+            <div class="food-image">🍔</div>
+
+            <h3>Chicken Burger</h3>
+
+            <p>Juicy chicken burger</p>
+
+            <h4>₹199</h4>
+
+            <button onclick="addToCart('Chicken Burger', 199)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card" data-category="pizza" data-name="Veg Pizza">
+
+            <div class="food-image">🍕</div>
+
+            <h3>Veg Pizza</h3>
+
+            <p>Fresh vegetable pizza</p>
+
+            <h4>₹249</h4>
+
+            <button onclick="addToCart('Veg Pizza', 249)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card" data-category="burger" data-name="Veg Burger">
+
+            <div class="food-image">🍔</div>
+
+            <h3>Veg Burger</h3>
+
+            <p>Healthy vegetable burger</p>
+
+            <h4>₹149</h4>
+
+            <button onclick="addToCart('Veg Burger', 149)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card" data-category="dessert" data-name="Chocolate Cake">
+
+            <div class="food-image">🍰</div>
+
+            <h3>Chocolate Cake</h3>
+
+            <p>Soft chocolate cake</p>
+
+            <h4>₹179</h4>
+
+            <button onclick="addToCart('Chocolate Cake', 179)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card" data-category="dessert" data-name="Ice Cream">
+
+            <div class="food-image">🍨</div>
+
+            <h3>Ice Cream</h3>
+
+            <p>Cold and creamy dessert</p>
+
+            <h4>₹99</h4>
+
+            <button onclick="addToCart('Ice Cream', 99)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Cart -->
+
+<div id="cart" class="cart">
+
+    <div class="cart-box">
+
+        <button class="close" onclick="closeCart()">×</button>
+
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+        <button class="checkout" onclick="checkout()">
+            Checkout
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>© 2026 Foodie. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
