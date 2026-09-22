@@ -474,3 +474,459 @@ footer p {
     }
 
 }
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar animation */
+
+.navbar {
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Hero text animation */
+
+.hero-content {
+    animation: heroText 1s ease forwards;
+}
+
+@keyframes heroText {
+
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* Hero food */
+
+.hero-food {
+    animation: heroFood 1.2s ease forwards;
+}
+
+@keyframes heroFood {
+
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+
+/* Floating food circle */
+
+.food-circle {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Food emojis floating */
+
+.food-item {
+    display: inline-block;
+}
+
+.food-1 {
+    animation: foodRotate 4s ease-in-out infinite;
+}
+
+.food-2 {
+    animation: foodRotate 4s ease-in-out infinite 0.5s;
+}
+
+.food-3 {
+    animation: foodRotate 4s ease-in-out infinite 1s;
+}
+
+@keyframes foodRotate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+
+
+/* Rating card */
+
+.floating-card {
+    animation: floatingCard 3s ease-in-out infinite;
+}
+
+@keyframes floatingCard {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Buttons */
+
+.order-btn,
+.learn-btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.order-btn:hover,
+.learn-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Category cards */
+
+.category-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.category-card:hover {
+
+    transform:
+        translateY(-12px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Category icon */
+
+.category-icon {
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+.category-card:hover .category-icon {
+
+    transform:
+        scale(1.2)
+        rotate(8deg);
+
+}
+
+
+/* Food cards */
+
+.food-card {
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+.food-card:hover {
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Food emoji */
+
+.big-food {
+
+    display: inline-block;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+.food-card:hover .big-food {
+
+    transform:
+        scale(1.25)
+        rotate(8deg);
+
+}
+
+
+/* Food image */
+
+.food-image {
+
+    overflow: hidden;
+
+}
+
+
+/* Add button */
+
+.food-card button {
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+.food-card button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Search animation */
+
+.search-box {
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+.search-box:focus-within {
+
+    transform: scale(1.02);
+
+}
+
+
+/* About box */
+
+.about-box {
+
+    animation:
+        float 4s ease-in-out infinite;
+
+}
+
+
+/* Contact cards */
+
+.contact-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.contact-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Cart animation */
+
+.cart {
+
+    animation:
+        fadeIn 0.3s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+.cart-box {
+
+    animation:
+        cartSlide 0.4s ease;
+
+}
+
+@keyframes cartSlide {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Checkout button */
+
+.checkout {
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+.checkout:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* Different delay for cards */
+
+.category-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.category-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.category-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.category-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        animation:
+            heroTextMobile 0.8s ease;
+    }
+
+    @keyframes heroTextMobile {
+
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+}
