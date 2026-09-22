@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Foodie | Delicious Food Delivered</title>
@@ -11,25 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
     <!-- ================= NAVBAR ================= -->
 
-    <header>
+    <header class="navbar">
 
         <nav>
 
-            <h1>🍴 Foodie</h1>
+            <h1 class="logo">
+                🍴 Foodie
+            </h1>
 
             <div class="nav-links">
 
                 <a href="#home">Home</a>
-
                 <a href="#menu">Menu</a>
-
                 <a href="#about">About</a>
-
                 <a href="#contact">Contact</a>
 
                 <button onclick="showCart()">
@@ -51,7 +48,7 @@
         <div class="hero-content">
 
             <span class="hero-small">
-                🔥 Fresh • Delicious • Fast
+                ✨ Fresh • Delicious • Fast
             </span>
 
             <h2>
@@ -99,13 +96,15 @@
         </div>
 
 
+        <!-- Animated Food -->
+
         <div class="hero-food">
 
             <div class="food-circle">
 
-                🍕
-                🍔
-                🍰
+                <span class="food-item food-1">🍕</span>
+                <span class="food-item food-2">🍔</span>
+                <span class="food-item food-3">🍰</span>
 
             </div>
 
@@ -115,7 +114,6 @@
 
                 <div>
                     <strong>4.9 Rating</strong>
-
                     <small>Happy customers</small>
                 </div>
 
@@ -131,7 +129,7 @@
 
     <section class="category-section">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
 
             <span>WHAT WE OFFER</span>
 
@@ -146,7 +144,7 @@
 
         <div class="category-container">
 
-            <div class="category-card">
+            <div class="category-card reveal">
 
                 <div class="category-icon">
                     🍕
@@ -154,14 +152,12 @@
 
                 <h3>Pizza</h3>
 
-                <p>
-                    Cheesy and freshly baked
-                </p>
+                <p>Cheesy and freshly baked</p>
 
             </div>
 
 
-            <div class="category-card">
+            <div class="category-card reveal">
 
                 <div class="category-icon">
                     🍔
@@ -169,14 +165,12 @@
 
                 <h3>Burgers</h3>
 
-                <p>
-                    Juicy and delicious
-                </p>
+                <p>Juicy and delicious</p>
 
             </div>
 
 
-            <div class="category-card">
+            <div class="category-card reveal">
 
                 <div class="category-icon">
                     🍰
@@ -184,14 +178,12 @@
 
                 <h3>Desserts</h3>
 
-                <p>
-                    Sweeten your day
-                </p>
+                <p>Sweeten your day</p>
 
             </div>
 
 
-            <div class="category-card">
+            <div class="category-card reveal">
 
                 <div class="category-icon">
                     🍹
@@ -199,9 +191,7 @@
 
                 <h3>Drinks</h3>
 
-                <p>
-                    Refreshing beverages
-                </p>
+                <p>Refreshing beverages</p>
 
             </div>
 
@@ -215,7 +205,7 @@
 
     <section id="menu">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
 
             <span>OUR MENU</span>
 
@@ -272,10 +262,8 @@
         <div class="food-container">
 
 
-            <!-- Pizza -->
-
             <div
-                class="food-card"
+                class="food-card reveal"
                 data-category="pizza"
                 data-name="Cheese Pizza"
             >
@@ -286,7 +274,9 @@
                         Popular
                     </span>
 
-                    🍕
+                    <span class="big-food">
+                        🍕
+                    </span>
 
                 </div>
 
@@ -316,10 +306,9 @@
             </div>
 
 
-            <!-- Burger -->
 
             <div
-                class="food-card"
+                class="food-card reveal"
                 data-category="burger"
                 data-name="Chicken Burger"
             >
@@ -330,7 +319,9 @@
                         Bestseller
                     </span>
 
-                    🍔
+                    <span class="big-food">
+                        🍔
+                    </span>
 
                 </div>
 
@@ -360,17 +351,18 @@
             </div>
 
 
-            <!-- Veg Pizza -->
 
             <div
-                class="food-card"
+                class="food-card reveal"
                 data-category="pizza"
                 data-name="Veg Pizza"
             >
 
                 <div class="food-image">
 
-                    🍕
+                    <span class="big-food">
+                        🍕
+                    </span>
 
                 </div>
 
@@ -400,17 +392,18 @@
             </div>
 
 
-            <!-- Veg Burger -->
 
             <div
-                class="food-card"
+                class="food-card reveal"
                 data-category="burger"
                 data-name="Veg Burger"
             >
 
                 <div class="food-image">
 
-                    🍔
+                    <span class="big-food">
+                        🍔
+                    </span>
 
                 </div>
 
@@ -440,10 +433,9 @@
             </div>
 
 
-            <!-- Chocolate Cake -->
 
             <div
-                class="food-card"
+                class="food-card reveal"
                 data-category="dessert"
                 data-name="Chocolate Cake"
             >
@@ -454,7 +446,9 @@
                         Sweet Pick
                     </span>
 
-                    🍰
+                    <span class="big-food">
+                        🍰
+                    </span>
 
                 </div>
 
@@ -484,17 +478,18 @@
             </div>
 
 
-            <!-- Ice Cream -->
 
             <div
-                class="food-card"
+                class="food-card reveal"
                 data-category="dessert"
                 data-name="Ice Cream"
             >
 
                 <div class="food-image">
 
-                    🍨
+                    <span class="big-food">
+                        🍨
+                    </span>
 
                 </div>
 
@@ -533,7 +528,7 @@
 
     <section id="about" class="about-section">
 
-        <div class="about-content">
+        <div class="about-content reveal">
 
             <span>WHY FOODIE?</span>
 
@@ -549,31 +544,19 @@
                 your favourite meals right to your doorstep.
             </p>
 
-
             <div class="about-points">
 
-                <div>
-                    ✓ Fresh ingredients
-                </div>
-
-                <div>
-                    ✓ Fast delivery
-                </div>
-
-                <div>
-                    ✓ Affordable prices
-                </div>
-
-                <div>
-                    ✓ Easy online ordering
-                </div>
+                <div>✓ Fresh ingredients</div>
+                <div>✓ Fast delivery</div>
+                <div>✓ Affordable prices</div>
+                <div>✓ Easy online ordering</div>
 
             </div>
 
         </div>
 
 
-        <div class="about-box">
+        <div class="about-box reveal">
 
             <div class="about-emoji">
                 🍽️
@@ -595,7 +578,7 @@
 
     <!-- ================= CTA ================= -->
 
-    <section class="cta-section">
+    <section class="cta-section reveal">
 
         <h2>
             Hungry already?
@@ -617,7 +600,7 @@
 
     <section id="contact" class="contact-section">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
 
             <span>GET IN TOUCH</span>
 
@@ -632,20 +615,20 @@
 
         <div class="contact-container">
 
-            <div>
-                📍
+            <div class="contact-card reveal">
+                <span>📍</span>
                 <strong>Location</strong>
                 <p>Kerala, India</p>
             </div>
 
-            <div>
-                📞
+            <div class="contact-card reveal">
+                <span>📞</span>
                 <strong>Phone</strong>
                 <p>+91 98765 43210</p>
             </div>
 
-            <div>
-                ✉️
+            <div class="contact-card reveal">
+                <span>✉️</span>
                 <strong>Email</strong>
                 <p>hello@foodie.com</p>
             </div>
@@ -713,17 +696,13 @@
             <div class="footer-links">
 
                 <a href="#home">Home</a>
-
                 <a href="#menu">Menu</a>
-
                 <a href="#about">About</a>
-
                 <a href="#contact">Contact</a>
 
             </div>
 
         </div>
-
 
         <div class="footer-bottom">
 
